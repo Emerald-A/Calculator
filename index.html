@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <h1 id="calcType">Scientific</h1>
+        <div id=""> <input id="digitDisplay" type="text"></div>
+        <table id="calcStructure">
+            <tr>
+                <td><button class="actionButton">DEG</button></td>
+                <td><button class="actionButton">HYP</button></td>
+                <td><button class="actionButton">F-E</button></td>
+            </tr>
+            <tr>
+                <td><button class="otherActions">MC</button></td>
+                <td><button class="otherActions">MR</button></td>
+                <td><button class="otherActions">M+</button></td>
+                <td><button class="otherActions">M-</button></td>
+                <td><button class="otherActions">MS</button></td>
+            </tr>
+            <tr>
+                <td><button  onclick="select_operator('x^2')" class="otherButton">x<sup>2</sup></button></td>
+                <td><button   onclick="select_operator('**')" class="otherButton">x<sup>y</sup></button></td>
+                <td><button class="otherButton">sin</button></td>
+                <td><button class="otherButton">cos</button></td>
+                <td><button class="otherButton">tan</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="select_operator('√')" class="otherButton">√</button></td>
+                <td><button class="otherButton">10<sup>x</sup></button></td>
+                <td><button class="otherButton">log</button></td>
+                <td><button class="otherButton">Exp</button></td>
+                <td><button class="otherButton">Mod</button></td>
+            </tr>
+            <tr>
+                <td><button class="otherButton">↑</button></td>
+                <td><button id="ce" onclick="on_ce()" class="otherButton">ON</button></td>
+                
+                <td><button onclick="select_clear()" id="clrbutton" class="otherButton">C</button></td>
+                <td><button onclick="select_delet()" id="delbutton" class="otherButton">DEL</button></td>
+
+                <td><button onclick="select_operator('/')" class="functionButton">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="otherButton">π</button></td>
+                <td><button onclick="one(7)" class="numberButton">7</button></td>
+                <td><button onclick="one(8)" class="numberButton">8</button></td>
+                <td><button onclick="one(9)" class="numberButton">9</button></td>
+                <td><button onclick="select_operator('*')" class="functionButton">X</button></td>
+                
+            </tr>
+            <tr>
+                <td><button class="otherButton">n!</button></td>
+                <td><button onclick="one(4)" class="numberButton">4</button></td>
+                <td><button onclick="one(5)" class="numberButton">5</button></td>
+                <td><button onclick="one(6)" class="numberButton">6</button></td>
+                <td><button onclick="select_operator('-')" class="functionButton">-</button></td>
+                
+            </tr>
+            <tr>
+                <td><button class="otherButton">±</button></td>
+                <td><button onclick="one(1)" class="numberButton">1</button></td>
+                <td><button onclick="one(2)" class="numberButton">2</button></td>
+                <td><button onclick="one(3)" class="numberButton">3</button></td>
+                <td><button onclick="select_operator('+')" class="functionButton">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="otherButton">(</button></td>
+                <td><button class="otherButton">)</button></td>
+                <td><button onclick="one(0)" class="numberButton">0</button></td>
+                <td><button onclick="one('.')" class="functionButton">.</button></td>
+
+                <td><button onclick="equal()" id="eqlbutton" class="functionButton">=</button></td>
+                
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
